@@ -1,7 +1,7 @@
 body {
     background: linear-gradient(45deg, #22D45A, #2247D4, #1684AE);
     background-size: 1000% 1000%;
-    animation: GradientBackground 20s ease infinite;
+    animation: GradientBackground 40s ease infinite;
 
     position: relative;
     color: whitesmoke;
@@ -30,6 +30,9 @@ body {
 
 .buttons{
     margin: 0 24px 0 24px;
+    
+    width: auto;
+    height: auto;
 }
 
 .display{
@@ -39,8 +42,9 @@ body {
 }
 
 .form{
-    margin: 24px 0 24px 0;
-    width: 320px;
+    margin: 12px 0 12px 0;
+    width: 640px;
+    max-height: 520px;
 }
 
 :root {

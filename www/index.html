@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Home</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <script type="importmap">
+            {
+                "imports": {
+                    "@material/web/": "https://esm.run/@material/web/"
+                }
+            }
+        </script>
+        <script type="module">
+            import '@material/web/all.js';
+            import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+
+            document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+        </script>
+
+    </head>
+    <body>
+        <div class="display">
+            <div class="view">
+                <span>
+                    <h1 class="noto-sans-jp-qlarte">Welcome back</h1>
+                    <p class="noto-sans-jp-qlarte">let's get started!</p>
+                </span>
+            </div>
+    
+            <div class="operate">
+                
+                    <center>
+                        <md-filled-button class="buttons" aria-label="Submit items."
+                        onclick="location.href='./submit.html'">
+                            Start Submit
+                            <svg slot="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="undefined"><path d="M80-240v-480h80v480H80Zm560 0-57-56 144-144H240v-80h487L584-664l56-56 240 240-240 240Z"/></svg>
+                        </md-filled-button>
+                        <md-filled-tonal-button class="buttons" aria-label="View items."
+                        onclick="location.href='./viewer.html'">
+                            Viewer
+                            <svg slot="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="undefined"><path d="M440-320h80v-166l64 63 57-57-161-160-160 160 57 56 63-63v167ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-480H160v480Zm0 0v-480 480Z"/></svg>
+                        </md-filled-tonal-button>
+                    </center>
+            </div> 
+    
+            <div class="option">
+    
+            </div>
+        </div>
+    </body>
+</html>

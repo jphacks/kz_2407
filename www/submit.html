@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css" type="text/css">
+        <script src="js/submit.js"></script>
         <script type="importmap">
             {
                 "imports": {
@@ -33,27 +34,31 @@
         </div>
         
         <div>
+            <form name="baseform" onsubmit="onSubmit()">
             <div>
                 <center>
-                    <md-filled-text-field class="form" label="Key"></md-filled-text-field>
+                    <md-filled-text-field class="form" name="ikey" id="ikey" label="Key" required></md-filled-text-field>
                     <br>
-                    <md-filled-text-field class="form" type="textarea" label="body" rows="5"></md-filled-text-field>
+                    <md-filled-text-field class="form" name="ibody" id="ibody" type="textarea" label="body" rows="5" required></md-filled-text-field>
                 </center>
             </div>
                 
             <div class="operate">
-                    <center>
-                    <md-filled-tonal-button class="buttons" aria-label="Submit inputed item."
-                        onclick="location.href='./index.html'">
-                        Back
-                        <svg slot="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="whitesmoke" ><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
-                    </md-filled-tonal-button>
-                    <md-filled-button trailing-icon class="buttons" aria-label="Submit inputed item.">
-                        Submit
-                        <svg slot="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="whitesmoke"><path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"/></svg>
-                    </md-filled-button>
+                <center>
+                        <md-filled-tonal-button class="buttons" aria-label="Submit inputed item."
+                            onclick="location.href='./index.html'">
+                            Back
+                            <svg slot="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="whitesmoke" ><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+                        </md-filled-tonal-button>
+                        <md-filled-button trailing-icon class="buttons" aria-label="Submit inputed item."
+                        type="submit">
+                            Submit
+                            <svg slot="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="whitesmoke"><path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"/></svg>
+                        </md-filled-button>
+
                 </center>
             </div> 
+            </form>
     
             <div class="option">
     

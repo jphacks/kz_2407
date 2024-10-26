@@ -1,0 +1,75 @@
+body {
+    background: linear-gradient(45deg, #22D45A, #2247D4, #1684AE);
+    background-size: 1000% 1000%;
+    animation: GradientBackground 20s ease infinite;
+
+    position: relative;
+    color: whitesmoke;
+  }
+  
+  h1 {
+      text-align: center;
+      font-size: 64px;
+      font-weight: 500;
+      margin: 0;
+  }
+  
+  p{
+      text-align: center;
+      font-size: 32px;
+      font-weight: 200;
+      margin: 0;
+      margin-bottom: 24px;
+  }
+
+.noto-sans-jp-qlarte {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+.buttons{
+    margin: 0 24px 0 24px;
+}
+
+.display{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,130%);
+}
+
+.form{
+    margin: 24px 0 24px 0;
+    width: 320px;
+}
+
+:root {
+    /* Generated from Material Theme Builder Figma plugin
+       or `material-color-utilities`. */
+    --md-sys-color-primary: #006A6A;
+    --md-sys-color-on-primary: #FFFFFF;
+    --md-sys-color-primary-container: #6FF7F6;
+    --md-sys-color-on-primary-container: #002020;
+    /* ... */
+  }
+  
+/* Usage in custom components */
+.primary {
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+  }
+
+
+@keyframes GradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+};

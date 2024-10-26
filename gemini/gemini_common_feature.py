@@ -17,11 +17,11 @@ chat = model.start_chat(history=[])
 
 # ユーザーからの入力を受け取る
 user_input = "サッカー、バスケ、散歩、ピアノ、アニメ、野球、サッカー"
-user_input2 = "これらの共通点を見つけて単語で１０個出して"
+user_input2 = "これらの共通点を見つけて英単語で１０個出して"
 
 # チャットの応答
 response = chat.send_message(user_input)
 response2 = chat.send_message(user_input2)
 
-#print(response.text)
+print(response.text)
 print(response2.text)

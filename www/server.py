@@ -63,7 +63,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
         self.end_headers()  
-        with open("./www/submit.html", "rb") as file:
+        with open("./submit.html", "rb") as file:
             self.wfile.write(file.read())
 
     def do_POST(self):
@@ -90,11 +90,11 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
         self.end_headers()
-        response = f"<html><body><h2>recv.data</h2><p>data: {ibody}</p></body></html>"
+        response = f"<html><head><meta charset='utf-8'/></head><body><h2>recv.data</h2><p>data: {ibody}</p></body></html>"
         self.wfile.write(response.encode('utf-8'))
 
 # サーバー設定
-port = 80
+port = 8081
 server_address = ('', port)
 httpd = HTTPServer(server_address, SimpleHTTPRequestHandler)
 print(f"Server is ready! on http://127.0.0.1:{port}")

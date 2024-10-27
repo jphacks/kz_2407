@@ -28,7 +28,7 @@
 HTML、Python
 #### API・データ
 * Gemini API
-*Google Colab(Python Notobook)
+* Google Colab(Python Notobook)
 
 #### フレームワーク・ライブラリ・モジュール
 * google.generativeai

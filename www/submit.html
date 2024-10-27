@@ -8,8 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/main.css" type="text/css">
-        <script src="js/submit.js"></script>
+
         <script type="importmap">
             {
                 "imports": {
@@ -27,42 +26,104 @@
     </head>
     <body>
         <div class="view">
-            <span>
-                <h1 class="noto-sans-jp-qlarte">Form</h1>
-                <p class="noto-sans-jp-qlarte">a</p>
-            </span>
+            <p class="noto-sans-jp-qlarte">Form</p>
         </div>
         
         <div>
-            <form name="baseform" onsubmit="onSubmit()">
-            <div>
-                <center>
-                    <md-filled-text-field class="form" name="ikey" id="ikey" label="Key" required></md-filled-text-field>
-                    <br>
-                    <md-filled-text-field class="form" name="ibody" id="ibody" type="textarea" label="body" rows="5" required></md-filled-text-field>
-                </center>
-            </div>
+            <form name="baseform" method="post">
+                <div>
+                    <center>
+                    <!--md-filled-text-field class="form" name="ikey" id="ikey" label="Key" required></md-filled-text-field-->
+                    
+                        <md-filled-text-field class="form" name="ibody" id="ibody" type="textarea" label="input text! " rows="5" required></md-filled-text-field>
+                    </center>
+                </div>
                 
-            <div class="operate">
-                <center>
-                        <md-filled-tonal-button class="buttons" aria-label="Submit inputed item."
-                            onclick="location.href='./index.html'">
-                            Back
-                            <svg slot="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="whitesmoke" ><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+                <div class="operate">
+                    <center>
+                        <md-filled-tonal-button class="buttons" aria-label="Clear input." onclick="document.baseform.ibody.value=''">
+                            Clear
+                            <svg slot="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
                         </md-filled-tonal-button>
-                        <md-filled-button trailing-icon class="buttons" aria-label="Submit inputed item."
-                        type="submit">
-                            Submit
-                            <svg slot="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="whitesmoke"><path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"/></svg>
+                        <md-filled-button trailing-icon class="buttons" aria-label="Submit inputed item." type="submit">
+                            <span name="btnRightContext">
+                                Submit
+                            </span>
+                            <svg slot="icon" name="btnRightImg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="whitesmoke"><path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"/></svg>
                         </md-filled-button>
-
-                </center>
-            </div> 
+                    </center>
+                </div> 
             </form>
     
-            <div class="option">
-    
-            </div>
         </div>
     </body>
+
+<style>
+
+body {
+    background: linear-gradient(45deg, #22D45A, #2247D4, #1684AE);
+    background-size: 1000% 1000%;
+    animation: GradientBackground 40s ease infinite;
+
+    position: relative;
+    color: whitesmoke;
+  }
+  
+  h1 {
+      text-align: center;
+      font-size: 64px;
+      font-weight: 500;
+      margin: 0;
+  }
+  
+  p{
+      text-align: center;
+      font-size: 32px;
+      font-weight: 200;
+      margin: 0;
+      margin-bottom: 24px;
+  }
+
+.noto-sans-jp-qlarte {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+.buttons{
+    margin: 0 24px 0 24px;
+    
+    width: auto;
+    height: auto;
+}
+
+.display{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,130%);
+}
+
+.form{
+    margin: 12px 0 12px 0;
+    width: 640px;
+    max-height: 520px;
+}
+
+
+@keyframes GradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+};
+
+</style>
+
 </html>

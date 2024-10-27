@@ -81,17 +81,17 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         chat = gemini_setting()
         response = conversation(chat, user)
 
-        image = ai_img(response)
-
-        # 生成した画像の保存
-        image.save("ai_img.png")
-
         # 解析結果を表示
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
         self.end_headers()
-        response = f"<html><head><meta charset='utf-8'/></head><body><h2>recv.data</h2><p>data: {ibody}</p></body></html>"
+        response = f"<html><head><meta charset='utf-8'/></head><body><h2>recv.data</h2><p>data: {response}</p></body></html>"
         self.wfile.write(response.encode('utf-8'))
+        
+        image = ai_img(response)
+
+        # 生成した画像の保存
+        image.save("ai_img.png")
 
 # サーバー設定
 port = 8081

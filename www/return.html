@@ -23,6 +23,20 @@
             document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
         </script>
 
+        <script>
+function updateImage() {
+    const imgEle = document.getElementById("result");
+    imgEle.src = "./ai_img.png" + "?" + Date.now();
+}
+
+window.addEventListener('load', function () {
+
+// 5秒ごとに、フレームをreload
+setInterval(updateImage, 1000);
+
+});
+        </script>
+
     </head>
     <body>
         <div class="view">

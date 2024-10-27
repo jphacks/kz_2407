@@ -31,8 +31,9 @@ HTML、Python
 *Google Colab(Python Notobook)
 
 #### フレームワーク・ライブラリ・モジュール
-* 
-* 
+* google.generativeai
+* torch
+* diffusers
 
 #### デバイス
 * 
